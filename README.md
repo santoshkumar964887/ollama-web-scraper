@@ -102,15 +102,15 @@ The application handles:
 
 ## Configuration Options
 
-| Variable | Default | Description |
-|----------|---------|-------------|
-| `OLLAMA_HOST` | `http://localhost:11434` | Ollama API endpoint |
-| `OLLAMA_MODEL` | `gpt-oss:20b-cloud` | Model to use for summarization |
-| `OLLAMA_TIMEOUT` | `120` | Request timeout in seconds |
-| `PLAYWRIGHT_TIMEOUT` | `30000` | Page load timeout in ms |
-| `MAX_CONTENT_LENGTH` | `8000` | Max chars to send to LLM |
-| `CHUNK_SIZE` | `6000` | Chunk size for long pages |
-| `CHUNK_OVERLAP` | `500` | Overlap between chunks |
+| Variable             | Default                  | Description                    |
+| -------------------- | ------------------------ | ------------------------------ |
+| `OLLAMA_HOST`        | `http://localhost:11434` | Ollama API endpoint            |
+| `OLLAMA_MODEL`       | `gpt-oss:20b-cloud`      | Model to use for summarization |
+| `OLLAMA_TIMEOUT`     | `120`                    | Request timeout in seconds     |
+| `PLAYWRIGHT_TIMEOUT` | `30000`                  | Page load timeout in ms        |
+| `MAX_CONTENT_LENGTH` | `8000`                   | Max chars to send to LLM       |
+| `CHUNK_SIZE`         | `6000`                   | Chunk size for long pages      |
+| `CHUNK_OVERLAP`      | `500`                    | Overlap between chunks         |
 
 ## Requirements
 
