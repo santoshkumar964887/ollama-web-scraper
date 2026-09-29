@@ -14,6 +14,8 @@ class Config:
     max_content_length: int = int(os.getenv("MAX_CONTENT_LENGTH", "8000"))
     chunk_size: int = int(os.getenv("CHUNK_SIZE", "6000"))
     chunk_overlap: int = int(os.getenv("CHUNK_OVERLAP", "500"))
+    openai_api_key: str = os.getenv("OPENAI_API_KEY", "ollama")
+    openai_base_url: str = os.getenv("OPENAI_BASE_URL", "http://localhost:11434/v1")
 
 
 config = Config()

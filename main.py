@@ -3,8 +3,9 @@ import asyncio
 from rich.console import Console
 from rich.rule import Rule
 
+from config import config
 from scraper import scrape_webpage, InvalidURLError, PageLoadError, BrowserError
-from llm import summarize_content, OllamaConnectionError, LLMAPIError
+from llm import summarize_content, OpenAIConnectionError, LLMAPIError
 
 console = Console()
 
@@ -37,9 +38,9 @@ async def main():
     try:
         summary = await summarize_content(content)
 
-    except OllamaConnectionError as e:
-        console.print(f"[red]Ollama connection error:[/red] {e}")
-        console.print("[yellow]Make sure Ollama is running at http://localhost:11434[/yellow]")
+    except OpenAIConnectionError as e:
+        console.print(f"[red]OpenAI/Ollama connection error:[/red] {e}")
+        console.print(f"[yellow]Make sure Ollama is running at {config.openai_base_url}[/yellow]")
         sys.exit(1)
     except LLMAPIError as e:
         console.print(f"[red]LLM API error:[/red] {e}")
